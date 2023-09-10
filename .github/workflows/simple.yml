@@ -8,6 +8,10 @@ jobs:
     steps:
       - name: echo a string
         run: echo "Hello World"
+      - name: List File
+        run: |
+          ls -lh
+          pwd
       - name: multiline script
         run: |
           node -v
