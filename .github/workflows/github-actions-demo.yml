@@ -9,11 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: iclouddevops/actions@main
+        uses: actions/checkout@v1
       - name: check dir
         run: |
           pwd
           ls -lh
+          env
 
 
       
