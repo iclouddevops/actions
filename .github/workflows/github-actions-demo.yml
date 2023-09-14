@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-        uses: iclouddevops/jenkinslib@main
+        uses: iclouddevops/actions@main
       - name: check dir
         run: |
           pwd
