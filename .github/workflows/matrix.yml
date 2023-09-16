@@ -1,14 +1,20 @@
 name: matrix testing
 
-on: [push]
+on: [pull_request]
 
 jobs:
   node-version:
     strategy:
       matrix:
+        os: [mascot-latest, ubuntu-latest, windows-latest]
         node_version: [6, 8, 10]
+        exclude:
+          - os: ubuntu-latest
+            node_version: 6
+          - os: mascot-latest
+            node_version: 8
       max-parallel: 0
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Log node version
         run: node -v
