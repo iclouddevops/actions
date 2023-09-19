@@ -27,6 +27,7 @@ jobs:
         run: go test -v ./....
 
       - name: Deploy
-        run: 
+        run: |
           pwd
           ls -lh
+          
